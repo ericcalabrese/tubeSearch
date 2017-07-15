@@ -35,6 +35,8 @@ function search(){
 	$('#results').html('');
 	$('#buttons').html('');
 
+	console.log("eric");
+
 	// Get Form Input
 	q = $('#query').val();
 
@@ -44,7 +46,8 @@ function search(){
 			part: 'snippet, id',
 			q: q,
 			type: 'video',
-			key: 'AIzaSyCvk3NNMQASZgFkCNxIp9jH-l8O0PXhDUo'},
+			key: 'AIzaSyA7MfDR0HKOAw78eZJxnBB5whjCrdDR8-A'},
+
 			function(data){
 				var nextPageToken = data.nextPageToken;
 				var prevPageToken = data.prevPageToken;
@@ -64,7 +67,11 @@ function search(){
 
 				$('#buttons').append(buttons);
 			}
-	);
+	)
+	.fail(function(xhr, statusText) {
+		console.log("eric" + statusText);
+    alert( "$.get failed!" + statusText);
+  });
 }
 
 function getOutput(item){
