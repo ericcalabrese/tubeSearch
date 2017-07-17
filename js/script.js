@@ -88,7 +88,7 @@ function nextPage(){
 			q: q,
 			pageToken: token,
 			type:'video',
-			key: 'AIzaSyCvk3NNMQASZgFkCNxIp9jH-l8O0PXhDUo'},
+			key: 'AIzaSyA7MfDR0HKOAw78eZJxnBB5whjCrdDR8-A'},
 			function(data){
 				var nextPageToken = data.nextPageToken;
 				var prevPageToken = data.prevPageToken;
